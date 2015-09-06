@@ -1,0 +1,80 @@
+<template name="FixDeals">
+    {{>dealSummary}}
+</template>
+
+<template name="dealSummary">
+     {{#each errors}}
+        {{>dealerror}}
+     {{/each}}
+</template>
+
+<template name="dealerror">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+    <span class="label label-info">{{TYPE}}</span> 
+    <span>{{TAGS}}</span>
+    <span class="glyphicon glyphicon-folder-close pull-right"> Archive</span>
+    <span class="glyphicon glyphicon-wrench pull-right"> Fix</span>
+    </div>
+    <div class="panel-body">
+        <div class="dealnum">
+        {{#each DEALS}}
+        <code>{{this}}</code>
+        {{/each}}
+        </div>
+        <br class="little-margin">
+        <div class="jobids">
+            {{#each JOBIDS}}
+            <span>{{this}}</span>
+            {{/each}}
+        </div>
+        <br>
+        {{>solutionfix}}
+    </div>
+    <div class="panel-footer">
+        {{>solution}}
+    </div>
+  </div>
+</template>
+
+<template name="solutionfix">
+    {{#each solutionfix}}
+        <div class="{{#if accepted}}bg-success{{/if}} solutionfix">
+            {{#each bumpfix}}
+                <strong>{{itemname}}</strong>
+                <br>
+                {{#each bump}}
+                    <code class="bumptenor">{{bumptenor}}</code>
+                    <code class="bumpvalue">{{bumpvalue}}</code>
+                {{/each}}
+                <br>
+            {{/each}}
+            <span>context override</span> <span>{{co}}</span>
+            <span class="glyphicon glyphicon-ok pull-right {{#if accepted}}accepted{{/if}}"></span>
+        </div>
+    {{/each}}
+</template>
+
+<template name="solution">
+    <div id="solution">
+        <div class="row" id="solution-ramp">  
+            <div class="col-xs-3 no-padding">
+                <input type="text" class="form-control input-sm" id="srcset" placeholder="Source Set">
+                <input type="text" class="form-control input-sm" id="destset" placeholder="Derived Set">
+                <div class="col-xs-9 no-padding">
+                    <input type="text" class="form-control input-sm datepicker" placeholder="DD/MM/YYYY">
+                </div>
+                <button type="submit" class="btn btn-default btn-sm pull-right" id="GetRamp">Get</button>
+            </div>  
+            <div class="col-xs-9" id="datatable">
+
+            </div>
+        </div>
+        <div class="row" id="solution-co">
+            <div class="col-xs-6 no-padding">
+              <input type="text" class="form-control input-sm " value="add-co name">
+            </div>
+              <button type="submit" id="addSolution" class="btn btn-default btn-sm">Fix</button> 
+        </div>
+    </div> 
+</template>

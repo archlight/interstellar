@@ -1,0 +1,77 @@
+{
+	"Tokyo":{
+		"ptf":"bk123",
+		"path":"\\\\sins00120165\\Reporting\\Risk",
+		"mad":"MADTUKL",
+		"scenes":{
+			"jpyclose":{
+				"preview":{
+					"rvg":"ActRpt",
+					"mad|rvg":["PV", "FXDelta", "PVNew", "FXDeltaNew"]
+				},
+				"monitor":{
+					"HYBRID DELTA JPYCLOSE 123":[],
+					"HYBRID FX GAMMA JPYCLOSE 123":["MAD_123FxMiniScenarios", "MadFxAudJpyGammaScenarios", "MadFxUsdJpyGammaScenarios", "MadFxAudUsdGammaScenarios"]						
+				}
+			},
+			"ccyclose":{
+				"preview":{
+					"rvg":"ActRpt",
+					"mad|rvg":["PV_CCYLOSE", "FXDelta", "FXDeltaNew"]
+				},
+				"monitor":{
+					"HYBRID DELTA CCYCLOSE 123":[]
+				}
+			},
+			"ccymorning":{
+				"preview":{
+					"rvg":"ActRpt",
+					"mad|rvg":["PV_CCYMORNING", "FXDelta", "FXDeltaNew"]
+				},
+				"monitor":{
+					"HYBRID MORNING 123":["FxDelta"],
+					"HYBRID MORNING PV BATCH":["PV_CCYCLOSE", "PV_CCYMORNING"]						
+				}
+			}
+		}
+	},
+	"London":{
+		"ptf":"bklonxhybrids",
+		"path":"\\\\sins00120165\\Reporting\\Risk",
+		"mad":"MADBUKL",
+		"scenes":{
+			"eurevening":{
+				"preview":{
+					"rvg":"ActRpt",
+					"mad|rvg":["PV", "FxDeltaConsistent", "PVNew", "FxDeltaConsistentNew"]
+				},
+				"monitor":{
+					"LON_MM_EVENING_INTRADAY":["FX_DELTA_EOD_CONS", "FX_DELTA_EOD_CONS_NEW"]
+				}
+			},
+			"eurclose":{
+				"preview":{
+					"rvg":"ActRpt",
+					"mad|rvg":["PV", "FxDeltaConsistent", "PVNew", "FxDeltaConsistentNew"]
+				},
+				"monitor":{
+					"LON_MM_OVERNIGHT_HYBRIDS":["PV_SOD", "PV_SOD_NEW", "FX_DELTA_SOD_CONS", "FX_DELTA_SOD_CONS_NEW"],
+					"LON_MM_OVERNIGHT_SCRIPTS":["FX_HYBRID_CASH", "FX_HYBRID_CASH2"]						
+				}
+			},
+			"europen":{
+				"preview":{
+					"rvg":"ActRpt",
+					"mad|rvg":["PV", "FxDeltaConsistent", "PVNew", "FxDeltaConsistentNew"]
+				},
+				"monitor":{
+					"LON_MM_OVERNIGHT_HYBRIDS_OPEN":["FX_SOD_CONS_EURMRN", "FX_SOD_CONS_NEW_EURMRN",
+					"FX_FX_XGAMMA_CONS", "FX_PV_LADDERVANILLA", "FX_PV_LADDERUNSTABLE_NO_BRL", "FX_PV_LADDERUNSTABLE_BRL", "FX2D_EURUSD_USDZAR",
+					"MultiCcySohoWingsATM", "MultiCcySohoWingsRR", "MultiCcySohoWingsBT"
+					],
+					"LON_MM_OVERNIGHT_HYBRIDS":["PV_EOD_EURMORN", "PV_EOD_NEW_EURMORN"]
+				}
+			}
+		}
+	}
+}

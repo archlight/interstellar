@@ -1,0 +1,95 @@
+
+
+***********************************************************************
+Fatal NI connect error 12537, connecting to:
+ (DESCRIPTION=(FAILOVER=ON)(ENABLE=BROKEN)(ADDRESS=(PROTOCOL=TCP)(HOST=scan-gftbsgl.sg.net.intra)(PORT=1522))(CONNECT_DATA=(SERVICE_NAME=GFTBSGL)(SERVER=DEDICATED)(FAILOVER_MODE=(TYPE=select)(METHOD=basic)(RETRIES=20)(DELAY=15))(CID=(PROGRAM=C:\Program?Files??x86?\Python32\python.exe)(HOST=SINW11088130)(USER=SG908278))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.3.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.3.0 - Production
+  Time: 24-JAN-2015 18:55:33
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12537
+    TNS-12537: TNS:connection closed
+    ns secondary err code: 12560
+    nt main err code: 507
+    TNS-00507: Connection closed
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12537, connecting to:
+ (DESCRIPTION=(FAILOVER=ON)(ENABLE=BROKEN)(ADDRESS=(PROTOCOL=TCP)(HOST=scan-gftbsgl.sg.net.intra)(PORT=1522))(CONNECT_DATA=(SERVICE_NAME=GFTBSGL)(SERVER=DEDICATED)(FAILOVER_MODE=(TYPE=select)(METHOD=basic)(RETRIES=20)(DELAY=15))(CID=(PROGRAM=C:\Program?Files??x86?\Python32\python.exe)(HOST=SINW11088130)(USER=SG908278))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.3.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.3.0 - Production
+  Time: 24-JAN-2015 18:55:33
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12537
+    TNS-12537: TNS:connection closed
+    ns secondary err code: 12560
+    nt main err code: 507
+    TNS-00507: Connection closed
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12537, connecting to:
+ (DESCRIPTION=(FAILOVER=ON)(ENABLE=BROKEN)(ADDRESS=(PROTOCOL=TCP)(HOST=scan-gftbsgl.sg.net.intra)(PORT=1522))(CONNECT_DATA=(SERVICE_NAME=GFTBSGL)(SERVER=DEDICATED)(FAILOVER_MODE=(TYPE=select)(METHOD=basic)(RETRIES=20)(DELAY=15))(CID=(PROGRAM=C:\Program?Files??x86?\Python32\python.exe)(HOST=SINW11088130)(USER=SG908278))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.3.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.3.0 - Production
+  Time: 24-JAN-2015 18:56:53
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12537
+    TNS-12537: TNS:connection closed
+    ns secondary err code: 12560
+    nt main err code: 507
+    TNS-00507: Connection closed
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12537, connecting to:
+ (DESCRIPTION=(FAILOVER=ON)(ENABLE=BROKEN)(ADDRESS=(PROTOCOL=TCP)(HOST=scan-gftbsgl.sg.net.intra)(PORT=1522))(CONNECT_DATA=(SERVICE_NAME=GFTBSGL)(SERVER=DEDICATED)(FAILOVER_MODE=(TYPE=select)(METHOD=basic)(RETRIES=20)(DELAY=15))(CID=(PROGRAM=C:\Program?Files??x86?\Python32\python.exe)(HOST=SINW11088130)(USER=SG908278))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.3.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.3.0 - Production
+  Time: 24-JAN-2015 18:56:53
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12537
+    TNS-12537: TNS:connection closed
+    ns secondary err code: 12560
+    nt main err code: 507
+    TNS-00507: Connection closed
+    nt secondary err code: 0
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12170.
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.3.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.3.0 - Production
+  Time: 16-MAY-2015 21:35:26
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12535
+    TNS-12535: TNS:operation timed out
+    ns secondary err code: 12560
+    nt main err code: 505
+    TNS-00505: Operation timed out
+    nt secondary err code: 60
+    nt OS err code: 0
+  Client address: (ADDRESS=(PROTOCOL=tcp)(HOST=10.2.55.158)(PORT=1522))

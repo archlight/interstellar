@@ -1,0 +1,109 @@
+<template name="mainview">
+  <div class="row">
+    <div class="col-md-2 medium-margin">
+      {{>quotes}}  
+    </div>
+    <div class="col-md-3 medium-margin">
+    {{#each locations}}
+        {{>preview}}
+    {{/each}}
+    </div>
+    <div class="col-md-4 medium-margin">
+       {{>todolist}}
+       {{>intraday}}
+    </div>
+  </div>
+</template>
+
+<template name="preview">
+    {{#each snapshots }}
+        <div class="panel no-padding preview">
+            <div class="panel-heading">
+                <span class="label label-default pull-right">{{eta}}</span>
+                <span><a href="#">{{name}}</a></span>
+            </div>
+            <div class="panel-body horizontal">
+                <div>----</div>
+                <div class="pull-right">
+                    <ul class="list-unstyled">
+                      <li><code>USDJPY</code>---</li>
+                      <li><code>AUDJPY</code>---</li>
+                      <li><code>EURJPY</code>---</li>
+                      <li><code>CHFJPY</code>---</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</template>
+
+<template name="intraday">
+    <div class="panel no-padding">
+      <div class="panel-heading">
+          <span><a href="#">Garguanta Run</a></span>
+      </div>
+      <div class="panel-body">
+          {{#each activity}}
+              <div data-toggle="collapse" data-target="#{{session_id}}" aria-expanded="false" aria-controls="{{session_id}}" class="gray-bg">
+                  <a href="#">{{session_id}}</a>
+              </div>
+              <div class="collapse in" id="{{session_id}}">
+                <ul class="list-unstyled rrqueue">
+                  {{#each rrqueue}}
+                    {{>intradayjob}}
+                  {{/each}}
+                </ul>
+              </div>
+          {{/each}}
+        </div>
+    </div>
+</template>
+
+<template name="intradayjob">
+    <div>{{job_name}} : {{job_id}}</div>
+    <div class="progress">
+        <div class="progress-bar {{status}}" role="progressbar" aria-valuenow="{{percent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent}}%;"></div>
+    </div> 
+</template>
+
+<template name="quotes">
+    <div id="quotespanel">
+      {{#each quotes}}
+          <div class="panel">
+              <div class="panel-body">
+                {{#each data}}
+                    <div class="quote">
+                      <span class="label {{instr}}">{{quote}}</span>
+                      <span class="quotevalue">
+                          <span>{{unchanged}}</span><span class="no-margin update {{updown}}">{{changed}}</span>
+                      </span>
+                      <span class="change {{updown}}">{{change}}</span>
+                    </div>
+                {{/each}}
+              </div>
+          </div>
+        {{/each}}
+      </div>
+</template>
+
+<template name="calheatmap">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+      <strong>Daily Arrival Time Heat map</strong>
+      </div>
+      <div class="panel-body">
+        <div id="cal-heatmap">
+        </div>
+<!--         <ul id="legend" class="list-unstyled pull-right">
+          <li>0hr</li>
+          <li>1hr</li>
+          <li>2hr</li>
+          <li>3hr</li>
+        </ul> -->
+      </div>
+    </div>
+    <div class="horizontal" id="reasons">
+      <div style="vertical-algin:top">Reasons</div>
+      <textarea style="width:620px" rows=3></textarea>
+    </div>
+</template>

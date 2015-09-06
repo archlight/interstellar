@@ -1,0 +1,75 @@
+<template name="messages">
+    <div class="sidebard-panel">
+        <div class="message-status">
+            <strong>Messages</strong>
+            <span class="badge badge-info">{{notifycnt}}</span>
+            <span class="glyphicon glyphicon-plus pull-right" id="addPost"></span>
+        </div>
+        {{>input}}
+        {{#each messages}}
+            {{>message}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="message">
+    <div class="feed-element top-border {{#if unread}} unread {{/if}}" id="{{feedId}}">
+        <div class="pull-left" data-toggle="collapse" data-target="#reply{{feedId}}" aria-expanded="false" aria-controls="reply{{feedId}}">
+            <img alt="image" class="img-circle" src="/images/{{avatar}}.jpg">
+        </div>
+        <div class="media-body">
+            <div>
+                <strong>@{{alias}}</strong>
+                <small class="text-muted pull-right">{{timestamp}}</small>
+            </div>
+            {{msg}}
+            <div class="todobar">
+                {{#if this.istodo}}
+                    {{#unless editable}}
+                        {{#with tododata}}
+                            {{>todoitem}}
+                        {{/with}}
+                    {{/unless}}
+                {{/if}}
+                {{#if editable}}
+                    {{>todoinput}}
+                {{/if}}
+
+                <div class="pull-right">
+                    <large><span class="glyphicon glyphicon-tasks"></span></large>
+                    <large><span class="replyto glyphicon glyphicon-comment"></span></large>       
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="collapse in" id="reply{{feedId}}">
+        {{#each replies topic_ts = this.ts}}
+            {{>reply}}
+        {{/each}}
+    </div>
+
+</template>
+
+<template name="reply">
+    <div class="feed-element reply">
+        <a href="." class="pull-left">
+            <img alt="image" class="img-circle" src="/images/{{avatar}}.jpg">
+        </a>
+        <div class="media-body">
+            {{msg}}
+            <br>
+            <small class="text-muted">{{timestamp}}</small>
+        </div>
+    </div>
+</template>
+
+<template name="input">
+    {{#textareaAutocomplete settings=settings id="post"}}
+        {{myStartingText}}
+    {{/textareaAutocomplete}}
+</template>
+
+<template name="userPill">
+    <span class="label label-primary">{{name}}</span>
+</template>

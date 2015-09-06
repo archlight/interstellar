@@ -1,0 +1,459 @@
+{
+    "PairwiseCorrel": {
+        "LON_MM_OVERNIGHT_HYBRIDS": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1EURCLOSEMADGenericCorrelation", 
+                    "JOBNAME": "HYBRID_GENCORREL"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }, 
+    "Model7Vega": {
+        "LON_MM_OVERNIGHT_EQUITY": {
+            "JOBS": [
+                {
+                    "RISKFILE": "120_EQ_VEGA_VOLREF", 
+                    "JOBNAME": "120_EQ_VEGA_VOLREF"
+                }, 
+                {
+                    "RISKFILE": "120_EQ_VEGA_VOLINF", 
+                    "JOBNAME": "120_EQ_VEGA_VOLINF"
+                }, 
+                {
+                    "RISKFILE": "120_EQ_VEGA_SMILE", 
+                    "JOBNAME": "120_EQ_VEGA_SMILE"
+                }, 
+                {
+                    "RISKFILE": "120_EQ_VEGA_CURVE", 
+                    "JOBNAME": "120_EQ_VEGA_CURVE"
+                }, 
+                {
+                    "RISKFILE": "210_EQ_REPO_DIV", 
+                    "JOBNAME": "210_EQ_REPO_DIV"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "LONX EQTY HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "BK120"
+        }
+    }, 
+    "FX2D": {
+        "TEST_REN": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1FX2DMATRIX", 
+                    "JOBNAME": "FX2DMATRIX"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "BLANKBOOK", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }, 
+    "FXVanna": {
+        "LON_MM_OVERNIGHT_HYBRIDS": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1MADFxVanna", 
+                    "JOBNAME": "LONX114_FX_SABR_V"
+                }, 
+                {
+                    "RISKFILE": "View1MADFxVanna2", 
+                    "JOBNAME": "LONX114_FX_SABR_V2"
+                }, 
+                {
+                    "RISKFILE": "View1EURCLOSEMADMultiCcySohoWingsATM", 
+                    "JOBNAME": "MultiCcySohoWingsATM"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }, 
+    "PVTiming": {
+        "TOKYO INTERACTIVE BATCH": {
+            "JOBS": [
+                {
+                    "RISKFILE": "TIMING_MCEB_PV", 
+                    "JOBNAME": "123PV_TIMING"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "120", 
+            "BOOK": "OSPG_SIMULATION_TEST", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "SOHOWING"
+        }
+    }, 
+    "Model7Delta": {
+        "LON_MM_OVERNIGHT_EQUITY": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1MADEQDELTA", 
+                    "JOBNAME": "210_EQ_DELTA"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "LONX EQTY HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "BK120"
+        }
+    }, 
+    "REFREEZE": {
+        "LON_MM_OVERNIGHT_HYBRIDS": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1EUROPENMADPV", 
+                    "JOBNAME": "PV_SOD"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "120", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }, 
+    "IRGamma": {
+        "LON_MM_OVERNIGHT_HYBRIDS": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1MADIRDeltaNonEurGbpUsd", 
+                    "JOBNAME": "LONX_HYBRIDS_NONEUR_JDELTA"
+                }, 
+                {
+                    "RISKFILE": "IRGammaView1MADIRGammaNonEurUsdGbp", 
+                    "JOBNAME": "LONX_HYBRIDS_CM_GAMMA_NONE"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }, 
+    "123Spread": {
+        "HYBRID IR SPREAD JPYCLOSE 123": {
+            "JOBS": [
+                {
+                    "RISKFILE": "CML_AUD_Spreads", 
+                    "JOBNAME": "CML_AUD_Spreads"
+                }, 
+                {
+                    "RISKFILE": "CML_EUR_Spreads", 
+                    "JOBNAME": "CML_EUR_Spreads"
+                }, 
+                {
+                    "RISKFILE": "CML_USD_Spreads", 
+                    "JOBNAME": "CML_USD_Spreads"
+                }, 
+                {
+                    "RISKFILE": "CML_JPY_Spreads", 
+                    "JOBNAME": "CML_JPY_Spreads"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": 123, 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "SOHOWING"
+        }
+    }, 
+    "IRDelta": {
+        "LON_MM_OVERNIGHT_HYBRIDS": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1EUROPENMADIRDeltaStd", 
+                    "JOBNAME": "LONXHYB_DELTA_STD"
+                }, 
+                {
+                    "RISKFILE": "View1EUROPENMADIRDeltaStdLvl2", 
+                    "JOBNAME": "LONXHYB_DELTA_STD_LVL2"
+                }, 
+                {
+                    "RISKFILE": "View1EUROPENMADIRDeltaStd_P2", 
+                    "JOBNAME": "LONXHYB_DELTA_STD_P2"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }, 
+    "G10Intraday": {
+        "LON_MM_OVERNIGHT_HYBRIDS": {
+            "JOBS": [
+                {
+                    "RISKFILE": "PV_SOD_NEW2", 
+                    "JOBNAME": "PV_SOD_NEW2"
+                }, 
+                {
+                    "RISKFILE": "FX_DELTA_SOD_CONS_NEW2", 
+                    "JOBNAME": "FX_DELTA_SOD_CONS_NEW2"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "101", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }, 
+        "LON_MM_OVERNIGHT_HYBRIDS_OPEN": {
+            "JOBS": [
+                {
+                    "RISKFILE": "PV_EOD_NEW2_EURMORN", 
+                    "JOBNAME": "PV_EOD_NEW2_EURMORN"
+                }, 
+                {
+                    "RISKFILE": "FX_PV_LADDERVANILLA2", 
+                    "JOBNAME": "FX_PV_LADDERVANILLA2"
+                }, 
+                {
+                    "RISKFILE": "FX_SOD_CONS_NEW_EURMRN2", 
+                    "JOBNAME": "FX_SOD_CONS_NEW_EURMRN2"
+                }, 
+                {
+                    "RISKFILE": "MultiCcySohoWingsATMNew2", 
+                    "JOBNAME": "MultiCcySohoWingsATMNew2"
+                }, 
+                {
+                    "RISKFILE": "MultiCcySohoWingsBTNew2", 
+                    "JOBNAME": "MultiCcySohoWingsBTNew2"
+                }, 
+                {
+                    "RISKFILE": "MultiCcySohoWingsRRNew2", 
+                    "JOBNAME": "MultiCcySohoWingsRRNew2"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "101", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }, 
+    "FXIR": {
+        "LON_MM_OVERNIGHT_HYBRIDS": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1MADFXIRCrossG10", 
+                    "JOBNAME": "LONX114_FX_IR_G10"
+                }, 
+                {
+                    "RISKFILE": "View1MADIRDeltaNonEurGbpUsd", 
+                    "JOBNAME": "LONX_HYBRIDS_NONEUR_JDELTA"
+                }, 
+                {
+                    "RISKFILE": "View1MADFXIRCrossLATAM", 
+                    "JOBNAME": "LONX114_FX_IR_LATAM"
+                }, 
+                {
+                    "RISKFILE": "View1MADFXIRCrossMEA", 
+                    "JOBNAME": "LONX114_FX_IR_MEA"
+                }, 
+                {
+                    "RISKFILE": "View1MADFXIRCrossSEA", 
+                    "JOBNAME": "LONX114_FX_IR_SEA"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }, 
+    "FxVega": {
+        "LON_MM_OVERNIGHT_HYBRIDS": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1EURCLOSEMADMultiCcySohoWingsATM", 
+                    "JOBNAME": "MultiCcySohoWingsATM"
+                }, 
+                {
+                    "RISKFILE": "View1EURCLOSEMADMultiCcySohoWingsBT", 
+                    "JOBNAME": "MultiCcySohoWingsBT"
+                }, 
+                {
+                    "RISKFILE": "View1EURCLOSEMADMultiCcySohoWingsRR", 
+                    "JOBNAME": "MultiCcySohoWingsRR"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }, 
+    "PV": {
+        "LON_MM_OVERNIGHT_HYBRIDS": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1EUROPENMADPV", 
+                    "JOBNAME": "PV_SOD"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }, 
+    "IRVega": {
+        "LON_MM_OVERNIGHT_HYBRIDS": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1MADIRATMM2", 
+                    "JOBNAME": "LONXHYB_ATM_M2"
+                }, 
+                {
+                    "RISKFILE": "View1MADIRATMM2COM", 
+                    "JOBNAME": "LONXHYB_ATM_M2_COM"
+                }, 
+                {
+                    "RISKFILE": "View1MADIRATMM2NONEURNONUSD", 
+                    "JOBNAME": "LONXHYB_ATM_M2_MINOR_CCY"
+                }, 
+                {
+                    "RISKFILE": "View1MADIRATMM2NONEURNONUSD", 
+                    "JOBNAME": "LONXHYB_ATM_M2_MINOR_CCY"
+                }, 
+                {
+                    "RISKFILE": "View1MADIRATMM2Normal", 
+                    "JOBNAME": "LONXHYB_ATM_M2_NORM"
+                }, 
+                {
+                    "RISKFILE": "View1MADIRATMM5COM", 
+                    "JOBNAME": "LONXHYB_ATM_M5_COM"
+                }, 
+                {
+                    "RISKFILE": "View1MADIRATMM5NONEURNONUSDNormal", 
+                    "JOBNAME": "LONXHYB_ATM_M5_NON_EURUSD_NORM"
+                }, 
+                {
+                    "RISKFILE": "View1MADIRATMM2NONEURNONUSDNormal", 
+                    "JOBNAME": "LONXHYB_ATM_NON_EURUSD_NORM"
+                }, 
+                {
+                    "RISKFILE": "View1MADCashATM", 
+                    "JOBNAME": "CASH_ATM"
+                }, 
+                {
+                    "RISKFILE": "View1MADXCCYATM", 
+                    "JOBNAME": "XCCY_ATM"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }, 
+    "123Impact": {
+        "HYBRID DELTA CCYCLOSE 123": {
+            "JOBS": [
+                {
+                    "RISKFILE": "*", 
+                    "JOBNAME": "*"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "FXHYBJPY", 
+            "DAYOFFSET": "1", 
+            "TIMINGCALC": "SOHOWING"
+        }, 
+        "HYBRID MORNING PV BATCH": {
+            "JOBS": [
+                {
+                    "RISKFILE": "PV_CCYCLOSE", 
+                    "JOBNAME": "PV_CCYCLOSE"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "FXHYBJPY AND B2B 444", 
+            "DAYOFFSET": "1", 
+            "TIMINGCALC": "SOHOWING"
+        }, 
+        "HYBRID FXVEGA": {
+            "JOBS": [
+                {
+                    "RISKFILE": "OtherCCYVegaATM", 
+                    "JOBNAME": "MultiCcySohoWingsATM"
+                }, 
+                {
+                    "RISKFILE": "OtherCCYVegaBT", 
+                    "JOBNAME": "MultiCcySohoWingsBT"
+                }, 
+                {
+                    "RISKFILE": "OtherCCYVegaRR", 
+                    "JOBNAME": "MultiCcySohoWingsRR"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "FXHYBJPY", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "SOHOWING"
+        }
+    }, 
+    "IRSpread": {
+        "LON_MM_OVERNIGHT_HYBRIDS": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1EUROPENMADCMLSPREADCURVE_G10", 
+                    "JOBNAME": "CML_SPREAD_EURMRN_G10"
+                }, 
+                {
+                    "RISKFILE": "View1EUROPENMADCMLSPREADCURVE_LATAM", 
+                    "JOBNAME": "CML_SPREAD_EURMRN_LATAM"
+                }, 
+                {
+                    "RISKFILE": "View1EUROPENMADCMLSPREADCURVE_MEA", 
+                    "JOBNAME": "CML_SPREAD_EURMRN_MEA"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }, 
+    "FxDelta": {
+        "LON_MM_OVERNIGHT_HYBRIDS": {
+            "JOBS": [
+                {
+                    "RISKFILE": "View1EUROPENMADFxDeltaConsistent", 
+                    "JOBNAME": "FX_DELTA_SOD_CONS"
+                }
+            ], 
+            "GARDEN": "GARDEN (IBM-LON-PROD)", 
+            "PRIORITY": "80", 
+            "BOOK": "LONX HYBRIDS", 
+            "DAYOFFSET": "0", 
+            "TIMINGCALC": "HYBEXP"
+        }
+    }
+}

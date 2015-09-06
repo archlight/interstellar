@@ -1,0 +1,25 @@
+<template name="ErrorTemplate">
+
+	<form class="form-inline" id="tagform">
+	  <div class="form-group">
+	    <label for="type">TYPE</label>
+	    <input type="text" class="form-control input-sm" id="type" placeholder="MultiFXPowerDualBehaviour:FX3D">
+	  </div>
+	  <div class="form-group">
+	    <label for="regexpr">REGEXPR</label>
+	    <input type="text" class="form-control input-sm" id="regexpr" placeholder="(Bump \(\d+\)).*(MultiFXPowerDualBehaviour).*?(FX3D Correl Calibration failed, time = \d+\.\d+)">
+	  </div>
+	  <button id = "btn-add" class="btn btn-default btn-sm">Add</button>
+	  <button id = "btn-rebuild" class="btn btn-default btn-sm">Rebuild Index</button>
+	  <span id="buildstatus"></span>
+	</form>
+	<hr>
+	{{#each errtemplate}}
+		<div class="well little-padding little-margin">
+		<span class="label label-info">{{TYPE}}</span><span>{{REGEXPR}}</span>
+		<span class="glyphicon glyphicon-remove pull-right"></span>
+		</div>
+	{{/each}}
+
+
+</template>

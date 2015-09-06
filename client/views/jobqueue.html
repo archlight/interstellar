@@ -1,0 +1,100 @@
+<template name="filterby">
+  <nav>
+    <ul class="pager">
+      <li class="previous"><a href="#">Previous</a></li>
+      <li><span id="viewdate">{{viewdate}}</span></li>
+      <li class="next disabled"><a href="#">Next</a></li>
+    </ul>
+  </nav>
+</template>
+
+<template name="jobqueue">
+  <div class="row">
+    {{>filterby}}
+    {{>ErrorTemplate}}
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+    {{#each jobs}}
+      <div data-toggle="collapse" data-target="#{{scene}}" aria-expanded="false" aria-controls="{{scene}}" class="gray-bg">
+          <span class="label label-info">{{scene}}</span>
+      </div>
+      <div class="collapse in" id="{{scene}}">
+        <ul class="list-unstyled">
+          {{#each data}}
+            {{>jobitem}}
+          {{/each}}
+        </ul>
+      </div>
+    {{/each}}
+    </div>
+    <div class="col-md-6">
+      {{>errorview}}
+    </div>
+  </div>
+ 
+</template>
+
+<template name="errorview">
+  {{#each ERRORS}}
+    <p>{{MESSAGE_TEXT}}</p>
+    <hr>
+  {{/each}}
+</template>
+
+<template name="tagform">
+    <div class="errtemplateform">
+        <form class="form-inline" id="tagform">
+          <div class="form-group">
+            <label for="tagname"><small>Tag</small></label>
+            <input type="text" class="form-control input-sm" id="tagname" placeholder="Variance Squeeze">
+          </div>
+          <div class="form-group">
+            <label for="regexprval"><small>Regexpr</small></label>
+            <input type="text" class="form-control input-sm col-md-10" id="regexprval" placeholder="MultiFXPowerDualBehaviour::Price() failed with: Cholesky decomposition failed Bump">
+          </div>
+          <button type="submit" class="btn btn-sm btn-default">Add</button>
+        </form>
+    </div>
+</template>
+
+<template name="jobitem">
+    <li>
+      {{#if isRunning}}
+        <div class="progress">
+          <div class="progress-bar {{status}}" role="progressbar" aria-valuenow="{{percent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent}}%;">
+          </div>
+        </div>  
+      {{/if}}
+      <ol class="breadcrumb">
+        <li>{{JOB_NAME}}</li>
+        {{#each JOBCHAIN}}
+          {{>eachjob}}
+        {{/each}}
+      </ol>   
+    </li>
+</template>
+
+<template name="eachjob">
+  <li>
+  <a href="{{pathFor 'jobqueue' _id=this.JOB_ID}}">{{JOB_ID}}</a>
+  {{#if ERRCNT}}
+  <span class="badge badge-primary"><small>{{ERRCNT}}</small></span>
+  {{/if}}
+  </li>
+</template>
+
+<template name="scheduler">
+  <div>Schedule Tasks</div>
+  <ul class="unstyled-list">
+    {{#each schedtasks}}
+     <li>
+      <span>{{start_time}}</span>
+      <span>{{taskname}}</span>
+      <span>{{runcount}}</span>
+     </li>
+    {{/each}}
+  </ul>
+
+</template>

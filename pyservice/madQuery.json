@@ -1,0 +1,5 @@
+{
+	"progress":"Select j.job_id, j.batch_name, j.job_name, r.book_nam, l.sts_cod, l.proportion_done, j.base_dt from exo_app_queue q, exo_pp_job_name j, exo_rsk_prm r, exo_evt_log l where j.job_id = q.job_id and r.job_id = j.job_id and j.job_id = l.job_id and j.base_dt >=  to_date('%s', 'DD/MM/YYYY') and j.batch_name = '%s' %s order by j.job_name",
+	"errors":"select job_id, cfmn_no,line_no, message_text from exo_errors where job_id in (%s) order by job_id, cfmn_no, line_no",
+	"select_progress":"select job_id, proportion_done, sts_cod from exo_evt_log where job_id in (%s)"
+}

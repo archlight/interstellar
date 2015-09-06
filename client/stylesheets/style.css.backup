@@ -1,0 +1,483 @@
+/* BACKGROUNDS */
+.gray-bg {
+  background-color: #f3f3f4;
+}
+
+.white-bg {
+  background-color: #ffffff;
+}
+
+h3 {
+  padding: 0px;
+  margin: 0px;
+  color: #777
+}
+
+#page-wrapper.sidebar-content {
+  padding-right: 230px !important;
+}
+
+body {
+  font-size: 12px;
+
+}
+
+/* Message Bar */
+.sidebard-panel {
+  background: #ebebed;
+  padding: 0px;
+  width: 600px;
+  min-height: 980px;
+  margin: 0px 20px 0px 0px;
+}
+
+#icon img.img-circle {
+  width: 32px;
+  height: 32px;
+}
+
+.sidebard-panel .message-status {
+  padding: 5px 10px
+}
+
+.te-panel .feed-element img.img-circle {
+  width: 32px;
+  height: 32px;
+}
+.sidebard-panel .feed-element .media-body{
+  font-size: 12px;
+}
+
+.sidebard-panel .feed-element .pull-right{
+  display: inline-block;
+}
+
+.sidebard-panel .feed-element {
+  padding: 10px 10px 5px 10px;
+}
+.sidebard-panel .feed-element.unread {
+  margin-top: 15px;
+  padding-bottom: 0;
+  background-color:lightsteelblue;
+}
+
+.sidebard-panel .feed-element.top-border{
+  padding-top: 5px;
+  border-top: 1px solid #cfcfcf;
+}
+
+.sidebard-panel .feed-element .pull-left{
+  margin-right: 8px;
+}
+
+.sidebard-panel .feed-element.reply{
+  background-color: #ffffff;
+}
+
+.sidebard-panel .feed-element .todobar{
+  margin: 10px 0px;
+}
+
+
+.sidebard-panel .list-group {
+  margin-bottom: 10px;
+}
+.sidebard-panel .list-group .list-group-item {
+  padding: 5px 0;
+  font-size: 12px;
+  border: 0;
+}
+
+.sidebard-panel textarea#post {
+  margin: 10px 5px;
+  width: 98%;
+  height: 5em;
+}
+
+/* GLOBAL  */
+.little-padding {
+ padding: 5px
+}
+
+.little-margin {
+ margin: 5px
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0px
+}
+
+.row
+{
+  margin: 0px 0px;
+  padding-left: 0px
+}
+
+.large-margin
+{
+  margin-left: 40px;
+  margin-right: 40px
+}
+
+.row div{
+  padding-left: 0px;
+}
+
+.form-inline .form-group input#regexpr {
+    width:600px;
+}
+
+/*pricechangeupdate */
+table#pricechange td{
+  font-size:10px;
+  color:#777;
+  text-align: right
+}
+/* Minimal Panel aka ibox*/
+.panel {
+  border: none;
+}
+.panel.preview {
+  width: 220px;
+  margin-right: 45px;
+  display: inline-block;
+}
+
+.panel-heading {
+  padding: 5px;
+  border-top: 4px solid #e7eaec;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0px
+}
+
+.panel-body {
+  padding: 10px 5px;
+  border-top: 1px solid #e7eaec;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0px
+}
+.panel-body.horizontal div{
+  display: inline-block;
+}
+.panel-body.horizontal div:first-child{
+  padding: 30px 0px 0px 0px;
+}
+
+code{
+    font-size: 10px;
+    color:#25A8C7;
+    background-color:#F2F9F5;
+    margin-right: 10px;
+}
+
+code.bumptenor{
+    color: rgb(172,84,42);
+    background-color: rgb(191,188,114)
+}
+
+code.bumpvalue{
+    color: rgb(172,84,42);
+    background-color: none
+}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  z-index: 2;
+  color: #777777;
+  background-color: #E7EAEC;
+  border-color: #E7EAEC;
+}
+
+/*request nav*/
+.no-padding .list-group-item {
+  padding-left: 5px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+.no-padding .list-group-item:first-child {
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: none;
+}
+
+/*delivery nav*/
+#dlvy-nav {
+  min-height: 120px;
+}
+#dlvy-nav .list-group-item {
+  padding: 6px 5px;
+}
+#dlvy-nav .list-group-item:last-child {
+  padding-bottom: 33px;
+}
+
+/*fix deals*/
+/* CSS used here will be applied after bootstrap.css */
+code.text-info {
+  border-color: #3a87ad;
+}
+
+.form-inline input {
+ margin: 0px 10px 0px 10px
+}
+
+.table.table-bordered{
+ width:140px;
+ font-size:10px;
+}
+  
+.table.table-bordered th{
+ padding:2px;
+}
+
+.table.table-bordered td{
+ padding:2px;
+}
+
+#solution {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  background-color: whitesmoke;
+}
+
+#solution-ramp div{
+  display: inline-block;
+}
+#solution-ramp div:first-child{
+  width: 180px;
+  vertical-align: Top;
+}
+
+.col-xs-3.no-padding input{
+  margin-left: 0px;
+  margin-bottom: 15px;
+}
+
+#datatable {
+  margin-left: 30px
+}
+
+.loginArea{
+  margin-top: 12px;
+  position: absolute;
+  right: 200px;
+}
+
+.loginArea img.img-circle {
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+}
+
+#userlist {
+  position: absolute;
+  z-index: 2
+}
+
+span.glyphicon {
+  margin-left: 10px;
+  color: #777;
+}
+
+.navbar-nav {
+  padding-left: 20px
+}
+.navbar-nav > li > a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.header{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  background-color: #EBEBED
+}
+
+.header .pull-right {
+  margin-top: 8px;
+  margin-right: 40px
+}
+
+#login-buttons a,
+.accounts-dialog a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold
+}
+
+.navbar-inverse
+{
+  background-color: #EBEBED
+}
+
+#content {
+  padding: 0px 20px 0px 0px
+}
+
+li .breadcrumb {
+  font-size: 10px;
+  padding: 2px;
+  margin-bottom: 5px;
+  background-color: none
+}
+
+li .progress {
+  height: 2px;
+  border-radius: 0px;
+  margin-bottom: 0px
+}
+
+ul.rrqueue{
+  font-size: 10px
+}
+
+ul.rrqueue .progress {
+  height: 6px;
+  border-radius: 0px;
+  margin-bottom: 4px
+}
+
+.glyphicon-ok.accepted {
+  color: green;
+}
+
+.glyphicon-tasks.edit {
+  color: orange;
+}
+
+
+ul.pager {
+  margin-top: 0px
+}
+
+#quotespanel div.panel {
+  margin-right: 30px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#quotespanel div.panel .panel-body{
+  min-height: 140px
+}
+
+
+.quote {
+  width: 180px;
+  font-size: 10px;
+}
+
+.quote .label{
+  padding: 0 2px
+}
+
+.quote .quotevalue {
+  position: relative;
+  right: 90px;
+  float: right;
+  padding: 0px;
+}
+
+.quote .change {
+  position: relative;
+  float: right;
+}
+
+
+
+.quote .up{
+  color: green
+}
+.quote .down{
+  color: red
+}
+
+.label.FXSPOT{
+  background-color: rgb(191, 191, 114)
+}
+.label.SWAPRATE{
+  background-color: rgb(114, 133, 191)
+}
+.label.CRMRATE{
+  background-color: rgb(191, 114, 159)
+}
+.label.FWDSWAPRATE{
+  background-color: rgb(114, 190, 191)
+}
+
+.modal {
+  margin-top: 400px
+}
+
+/*to do list*/
+
+.todo-list {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.todo-list.small-list {
+  font-size: 12px;
+}
+.todo-list.small-list > li {
+  background: #f3f3f4;
+  border-left: none;
+  border-right: none;
+  border-radius: 4px;
+  color: inherit;
+  margin-bottom: 2px;
+  padding: 6px 6px 6px 12px;
+}
+.todo-list.small-list .btn-xs,
+.todo-list.small-list .btn-group-xs > .btn {
+  border-radius: 5px;
+  font-size: 10px;
+  line-height: 1.5;
+  padding: 1px 2px 1px 5px;
+}
+.todo-list > li {
+  background: #f3f3f4;
+  border-left: 6px solid #e7eaec;
+  border-right: 6px solid #e7eaec;
+  border-radius: 4px;
+  color: inherit;
+  margin-bottom: 2px;
+  padding: 10px;
+}
+.todo-list .handle {
+  cursor: move;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 5px;
+}
+
+.todo-list > li .label {
+  font-size: 9px;
+  margin-left: 10px;
+}
+
+#todoinput #todonew {
+  width: 300px;
+  background-color: rgba(234, 234, 236, 1);
+  border-top: none;
+  border-left: none;
+  border-right: none
+}
+#todoinput #eta {
+  width: 80px;
+  background-color: rgba(234, 234, 236, 1);
+  border:none;
+}

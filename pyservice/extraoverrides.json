@@ -1,0 +1,5 @@
+[
+	{"TAG":"nevercall", "VAL":"--remove-co EX_BOUND_INFO --remove-co SUPP_TRADE_INFO"},
+	{"TAG":"fullnevercall", "VAL":"--add-co FORCE_NEVER_CALL -5000"},
+	{"TAG":"REFREEZE", "VAL":"--add-co MCEB_INFO C --add-co MCEB_INFO_SETNO 83621"}
+]

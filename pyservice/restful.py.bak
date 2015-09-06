@@ -1,0 +1,73 @@
+import tornado.httpserver
+import tornado.ioloop
+import tornado.options
+import tornado.web
+import tornado.websocket
+from tornado import gen
+from tornado.options import define, options
+from tools.dbutil import maddb, mongodb
+from tools.ThreadPool import ThreadPool
+from tools.dateutil import dateoffset, xldate
+from datetime import datetime, timedelta
+import json
+import time
+import os
+
+class RampDiff(tornado.web.RequestHandler):
+    def post(self):
+
+        baseSet = self.get_argument("baseSet", "London Close")
+        destSet = self.get_argument("destSet", "HYBRID EURCLOSE")
+        setDate = self.get_argument("setDate", "16/01/2015")
+        print((baseSet, destSet, setDate))
+        t = calibrate(datetime.strptime(setDate, '%d/%m/%Y'))
+        self.write(rampdiffAll(baseSet, t, destSet, t))
+
+    def get(self):
+        pass
+
+class MainHandler(tornado.web.RequestHandler):
+    def get(self):
+        print("Web Service for interstellar")
+
+class Application(tornado.web.Application):
+
+    def __init__(self):
+        handlers = [
+                (r"/", MainHandler),
+                (r"/interstellar/rampdiff", RampDiff)
+        ]
+        settings = dict(debug=True)
+        tornado.web.Application.__init__(self, handlers, **settings)
+
+        self.menus = json.load(open("menuConfig.json"))
+        self.menus_mtime = os.path.getmtime(os.path.abspath("menuConfig.json"))
+        self.mad = maddb(json.load(open("madQuery.json")))
+        self.mongo = mongodb('mongodb://localhost:3001/', self.mad)
+        self.pool = ThreadPool(100)
+        self.initDate = datetime.today()
+
+    def errorRefresh(self):
+
+    def jobqueueRefresh(self):
+        mtime = os.path.getmtime(os.path.abspath("menuConfig.json"))
+        if self.menus_mtime > mtime:
+            self.menus = json.load(open("menuConfig.json"))
+            self.menus_mtime = mtime
+
+        baseDt = dateoffset(datetime.today(), -1,"%d/%m/%Y")
+        for loc, v in self.menus.items():
+            for farm, batches in v["monitor"].items():
+                if "MAD" in farm:
+                    for batch, jobs in batches.items():
+                    	self.mongo.refreshQueue(farm, baseDt, batch, jobs)
+
+        tornado.ioloop.IOLoop.instance().add_callback(self.errorRefresh)
+
+if __name__ == "__main__":
+    app = Application()
+    #http_server = tornado.httpserver.HTTPServer(app)
+    #http_server.listen(443)
+    app.listen(443)
+    tornado.ioloop.PeriodicCallback(app.jobqueueRefresh, 15*1000).start()
+    tornado.ioloop.IOLoop.instance().start()

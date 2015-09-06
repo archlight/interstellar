@@ -1,0 +1,45 @@
+<template name="todolist">
+    <div class="panel no-padding">
+        <div class="panel-heading">
+            <span><a href="#">to-do List</a></span>
+        </div>
+        <div class="panel-body">
+            <ul class="todo-list small-list">
+                {{#each todoitems}}
+                    <li>
+                        {{>todoitem2}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</template>
+
+<template name="todoitem">
+    <span class="todoitem">
+        <span>{{taskname}}</span>
+        <span class="stsicon">
+            <span>{{>peity}}</span>
+            <span class="text-muted">{{status}}</span>
+        </span>
+    </span>
+</template>
+
+<template name="todoitem2">
+    <div class="todoitem {{#if selected}}selected{{/if}}">
+        <span class="glyphicon glyphicon-ok {{#if accepted}}accepted{{/if}}"></span>
+        <span><a href="#">{{taskname}}</a></span>
+        <span class="pull-right">
+            <span>{{>peity}}</span>
+            <small class="text-muted">{{status}}</small>
+        </span>
+    </div>
+</template>
+
+<template name="todoinput">
+    <span id="todoinput">
+        <input type="text" id="todonew" placeholder="todo task" value="{{taskname}}">
+        <span>ETA</span>
+        <input type="text" id="eta" placeholder="DD/MM/YYYY" value="{{etastamp}}">
+    </span>
+</template>

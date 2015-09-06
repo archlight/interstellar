@@ -1,0 +1,13 @@
+realtime transparency and accuracy
+
+-- tagging system for notes/sharing
+++ @someone in chat
+-- watcher
+++ difframp in deal failure
+-- risk preview
+
+
+next release
+-- resizable message bar
+-- copy/paste tabular data
+-- clickable chat/
